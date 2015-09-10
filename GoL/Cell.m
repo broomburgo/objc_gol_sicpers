@@ -78,17 +78,15 @@
     static NSArray* value = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        value = [NSArray arrayWithObjects:
-                 [Cell dead],
-                 [Cell dead],
-                 [Cell living],
-                 [Cell living],
-                 [Cell dead],
-                 [Cell dead],
-                 [Cell dead],
-                 [Cell dead],
-                 [Cell dead],
-                 nil];
+        value = @[[Cell dead],
+                  [Cell dead],
+                  [Cell living],
+                  [Cell living],
+                  [Cell dead],
+                  [Cell dead],
+                  [Cell dead],
+                  [Cell dead],
+                  [Cell dead]];
     });
     return value;
 }
@@ -113,17 +111,15 @@
     static NSArray* value = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        value = [NSArray arrayWithObjects:
-                 [Cell dead],
-                 [Cell dead],
-                 [Cell dead],
-                 [Cell living],
-                 [Cell dead],
-                 [Cell dead],
-                 [Cell dead],
-                 [Cell dead],
-                 [Cell dead],
-                 nil];
+        value = @[[Cell dead],
+                  [Cell dead],
+                  [Cell dead],
+                  [Cell living],
+                  [Cell dead],
+                  [Cell dead],
+                  [Cell dead],
+                  [Cell dead],
+                  [Cell dead]];
     });
     return value;
 }

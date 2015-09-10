@@ -113,30 +113,24 @@
 - (NSArray*)verticalNeighboursOfX:(NSInteger)x
                                 y:(NSInteger)y {
     
-    return [NSArray arrayWithObjects:
-            [self cellAtX:x y:y-1],
-            [self cellAtX:x y:y+1],
-            nil];
+    return @[[self cellAtX:x y:y-1],
+             [self cellAtX:x y:y+1]];
 }
 
 - (NSArray*)horizontalNeighboursOfX:(NSInteger)x
                                   y:(NSInteger)y {
     
-    return [NSArray arrayWithObjects:
-            [self cellAtX:x-1 y:y],
-            [self cellAtX:x+1 y:y],
-            nil];
+    return @[[self cellAtX:x-1 y:y],
+             [self cellAtX:x+1 y:y]];
 }
 
 - (NSArray*)diagonalNeighboursOfX:(NSInteger)x
                                 y:(NSInteger)y {
     
-    return [NSArray arrayWithObjects:
-            [self cellAtX:x-1 y:y-1],
-            [self cellAtX:x-1 y:y+1],
-            [self cellAtX:x+1 y:y-1],
-            [self cellAtX:x+1 y:y+1],
-            nil];
+    return @[[self cellAtX:x-1 y:y-1],
+             [self cellAtX:x-1 y:y+1],
+             [self cellAtX:x+1 y:y-1],
+             [self cellAtX:x+1 y:y+1]];
 }
 
 - (NSArray*)neighboursOfX:(NSInteger)x
