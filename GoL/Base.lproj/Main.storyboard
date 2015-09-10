@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6198" systemVersion="14A297b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6198"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -641,12 +641,12 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider=""/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
-        <!--Window Controller - Window-->
+        <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
@@ -667,11 +667,52 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="hjl-Km-piR" customClass="GridView">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                <connections>
+                                    <outlet property="changeDelegate" destination="XfG-lQ-9wD" id="Qbs-OD-tBg"/>
+                                </connections>
+                            </customView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NYM-XE-wpR">
+                                <rect key="frame" x="2" y="234" width="76" height="32"/>
+                                <buttonCell key="cell" type="push" title="Clean" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="U1f-oc-STJ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="cleanAction:" target="XfG-lQ-9wD" id="k4U-cm-CGa"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QlS-at-o1D">
+                                <rect key="frame" x="412" y="234" width="66" height="32"/>
+                                <buttonCell key="cell" type="push" title="Tick" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="r9Z-D3-nDr">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="tickAction:" target="XfG-lQ-9wD" id="eKL-YY-pW2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="NYM-XE-wpR" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="8" id="61i-bW-MkD"/>
+                            <constraint firstItem="hjl-Km-piR" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="6qu-1F-acd"/>
+                            <constraint firstItem="QlS-at-o1D" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="8" id="9k1-KS-vzG"/>
+                            <constraint firstAttribute="trailing" secondItem="QlS-at-o1D" secondAttribute="trailing" constant="8" id="MBQ-de-Wkg"/>
+                            <constraint firstAttribute="trailing" secondItem="hjl-Km-piR" secondAttribute="trailing" id="Xff-uh-C1K"/>
+                            <constraint firstAttribute="bottom" secondItem="hjl-Km-piR" secondAttribute="bottom" id="bwP-8Y-c2J"/>
+                            <constraint firstItem="NYM-XE-wpR" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="8" id="cvp-Xc-7Tt"/>
+                            <constraint firstItem="hjl-Km-piR" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="pqn-gz-6FS"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gridView" destination="hjl-Km-piR" id="5jU-Vq-gvx"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

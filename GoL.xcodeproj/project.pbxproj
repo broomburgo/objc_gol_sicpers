@@ -13,6 +13,11 @@
 		3893B6BB1BA16F4000B6733C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3893B6BA1BA16F4000B6733C /* Images.xcassets */; };
 		3893B6BE1BA16F4000B6733C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3893B6BC1BA16F4000B6733C /* Main.storyboard */; };
 		3893B6CA1BA16F4000B6733C /* GoLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3893B6C91BA16F4000B6733C /* GoLTests.m */; };
+		3893B6DC1BA16F9600B6733C /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3893B6D51BA16F9600B6733C /* Cell.m */; };
+		3893B6DD1BA16F9600B6733C /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 3893B6D71BA16F9600B6733C /* Grid.m */; };
+		3893B6DE1BA16F9600B6733C /* GridVisitors.m in Sources */ = {isa = PBXBuildFile; fileRef = 3893B6D91BA16F9600B6733C /* GridVisitors.m */; };
+		3893B6DF1BA16F9600B6733C /* NSNumber+Times.m in Sources */ = {isa = PBXBuildFile; fileRef = 3893B6DB1BA16F9600B6733C /* NSNumber+Times.m */; };
+		3893B6E21BA1710700B6733C /* GridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3893B6E11BA1710700B6733C /* GridView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,16 @@
 		3893B6C31BA16F4000B6733C /* GoLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3893B6C81BA16F4000B6733C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3893B6C91BA16F4000B6733C /* GoLTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoLTests.m; sourceTree = "<group>"; };
+		3893B6D41BA16F9600B6733C /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		3893B6D51BA16F9600B6733C /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
+		3893B6D61BA16F9600B6733C /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
+		3893B6D71BA16F9600B6733C /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grid.m; sourceTree = "<group>"; };
+		3893B6D81BA16F9600B6733C /* GridVisitors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridVisitors.h; sourceTree = "<group>"; };
+		3893B6D91BA16F9600B6733C /* GridVisitors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridVisitors.m; sourceTree = "<group>"; };
+		3893B6DA1BA16F9600B6733C /* NSNumber+Times.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Times.h"; sourceTree = "<group>"; };
+		3893B6DB1BA16F9600B6733C /* NSNumber+Times.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Times.m"; sourceTree = "<group>"; };
+		3893B6E01BA1710700B6733C /* GridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridView.h; sourceTree = "<group>"; };
+		3893B6E11BA1710700B6733C /* GridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +94,7 @@
 		3893B6AF1BA16F4000B6733C /* GoL */ = {
 			isa = PBXGroup;
 			children = (
+				3893B6D31BA16F7300B6733C /* Logic */,
 				3893B6B21BA16F4000B6733C /* AppDelegate.h */,
 				3893B6B31BA16F4000B6733C /* AppDelegate.m */,
 				3893B6B71BA16F4000B6733C /* ViewController.h */,
@@ -114,6 +130,23 @@
 				3893B6C81BA16F4000B6733C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3893B6D31BA16F7300B6733C /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				3893B6D41BA16F9600B6733C /* Cell.h */,
+				3893B6D51BA16F9600B6733C /* Cell.m */,
+				3893B6D61BA16F9600B6733C /* Grid.h */,
+				3893B6D71BA16F9600B6733C /* Grid.m */,
+				3893B6D81BA16F9600B6733C /* GridVisitors.h */,
+				3893B6D91BA16F9600B6733C /* GridVisitors.m */,
+				3893B6DA1BA16F9600B6733C /* NSNumber+Times.h */,
+				3893B6DB1BA16F9600B6733C /* NSNumber+Times.m */,
+				3893B6E01BA1710700B6733C /* GridView.h */,
+				3893B6E11BA1710700B6733C /* GridView.m */,
+			);
+			name = Logic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,8 +248,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3893B6DE1BA16F9600B6733C /* GridVisitors.m in Sources */,
+				3893B6DD1BA16F9600B6733C /* Grid.m in Sources */,
 				3893B6B91BA16F4000B6733C /* ViewController.m in Sources */,
+				3893B6DC1BA16F9600B6733C /* Cell.m in Sources */,
+				3893B6DF1BA16F9600B6733C /* NSNumber+Times.m in Sources */,
 				3893B6B61BA16F4000B6733C /* main.m in Sources */,
+				3893B6E21BA1710700B6733C /* GridView.m in Sources */,
 				3893B6B41BA16F4000B6733C /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
