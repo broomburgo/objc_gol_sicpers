@@ -18,7 +18,7 @@
     return visitor;
 }
 
-- (id<AbstractCell>)visitCell:(id<AbstractCell>)cell
+- (id<CellInterface>)visitCell:(id<CellInterface>)cell
                          grid:(Grid*)grid
                    sideLength:(NSInteger)sideLength
                             x:(NSInteger)x
@@ -34,9 +34,9 @@
                                       horizontalExtent * boundsSize.width,
                                       verticalExtent * boundsSize.height);
     NSBezierPath *path = [NSBezierPath bezierPathWithRect:cellRectangle];
-    [[NSColor colorWithCalibratedWhite:[[cell cell] populationValue] alpha:1.0] set];
+    [[NSColor colorWithCalibratedWhite:[cell populationValue] alpha:1.0] set];
     [path stroke];
-    [[NSColor colorWithCalibratedWhite:1.0-[[cell cell] populationValue] alpha:1.0] set];
+    [[NSColor colorWithCalibratedWhite:1.0-[cell populationValue] alpha:1.0] set];
     [path fill];
     return cell;
 }

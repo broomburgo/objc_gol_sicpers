@@ -36,10 +36,9 @@ static const NSUInteger gridSize = 15;
     self.grid = [self.grid
                  cellAtX:cellX
                  y:cellY
-                 switchWith:[[[self.grid
-                               cellAtX:cellX
-                               y:cellY]
-                              cell]
+                 switchWith:[[self.grid
+                              cellAtX:cellX
+                              y:cellY]
                              switchPopulation]];
     
     [self.gridView drawGrid:self.grid];

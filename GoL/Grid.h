@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-@protocol AbstractCell;
+@protocol CellInterface;
 @protocol GridVisitor;
 
 @interface Grid : NSObject <NSCopying>
@@ -9,7 +9,7 @@
 + (Grid*)withSideLength:(NSUInteger)sideLength
                dwellers:(NSArray*)dwellers;
 
-- (id<AbstractCell>)cellAtX:(NSInteger)x
+- (id<CellInterface>)cellAtX:(NSInteger)x
                           y:(NSInteger)y;
 
 - (NSArray*)neighboursOfX:(NSInteger)x
@@ -17,10 +17,10 @@
 
 - (Grid*)cellAtX:(NSInteger)x
                y:(NSInteger)y
-      switchWith:(id<AbstractCell>)newCell;
+      switchWith:(id<CellInterface>)newCell;
 
 - (Grid*)tick;
-- (Grid*)fillWith:(id<AbstractCell>)cell;
+- (Grid*)fillWith:(id<CellInterface>)cell;
 
 - (Grid*)visit:(id<GridVisitor>)visitor;
 

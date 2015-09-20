@@ -5,7 +5,7 @@
 
 @implementation TickVisitor
 
-- (id<AbstractCell>)visitCell:(id<AbstractCell>)cell
+- (id<CellInterface>)visitCell:(id<CellInterface>)cell
                          grid:(Grid*)grid
                    sideLength:(NSInteger)n
                             x:(NSInteger)x
@@ -20,19 +20,19 @@
 
 @interface PopulateVisitor ()
 
-@property (nonatomic) id<AbstractCell> cell;
+@property (nonatomic) id<CellInterface> cell;
 
 @end
 
 @implementation PopulateVisitor
 
-+ (PopulateVisitor*)withCell:(id<AbstractCell>)cell {
++ (PopulateVisitor*)withCell:(id<CellInterface>)cell {
     PopulateVisitor* visitor = [PopulateVisitor new];
     visitor.cell = cell;
     return visitor;
 }
 
-- (id<AbstractCell>)visitCell:(id<AbstractCell>)cell
+- (id<CellInterface>)visitCell:(id<CellInterface>)cell
                          grid:(Grid*)grid
                    sideLength:(NSInteger)n
                             x:(NSInteger)x
@@ -66,11 +66,11 @@
     return visitation;
 }
 
-- (id<AbstractCell>)visitNext {
+- (id<CellInterface>)visitNext {
     NSUInteger x = self.cursor / self.sideLength;
     NSUInteger y = self.cursor % self.sideLength;
     self.cursor += 1;
-    id<AbstractCell> visited = [self.visitor
+    id<CellInterface> visited = [self.visitor
                                 visitCell:[self.grid
                                            cellAtX:x
                                            y:y]

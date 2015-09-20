@@ -3,25 +3,11 @@
 #import "GridVisitors.h"
 #import "NSNumber+Times.h"
 
-@interface EmptyCell : Cell <AbstractCell>
+@interface EmptyCell : Cell <CellInterface>
 
 @end
 
 @implementation EmptyCell
-
-- (id<ActiveCell>)cell {
-    return nil;
-}
-
-- (id<AbstractCell>)switchPopulation {
-    return [self cell];
-}
-
-- (id<AbstractCell>)tickOnGrid:(Grid*)grid
-                             x:(NSInteger)x
-                             y:(NSInteger)y {
-    return [self cell];
-}
 
 @end
 
@@ -52,18 +38,17 @@
     return grid;
 }
 
-- (id<AbstractCell>)cellAtX:(NSInteger)x
+- (id<CellInterface>)cellAtX:(NSInteger)x
                           y:(NSInteger)y {
-    return [[[self dwellers]
+    return [[self dwellers]
              objectAtIndex:[self
                             indexForX:x
-                            y:y]]
-            cell];
+                            y:y]];
 }
 
 - (Grid*)cellAtX:(NSInteger)x
                y:(NSInteger)y
-      switchWith:(id<AbstractCell>)newCell {
+      switchWith:(id<CellInterface>)newCell {
     NSMutableArray* m_dwellers = [self.dwellers mutableCopy];
     [m_dwellers
      replaceObjectAtIndex:[self
@@ -79,7 +64,7 @@
     return [self visit:[TickVisitor new]];
 }
 
-- (Grid*)fillWith:(id<AbstractCell>)cell {
+- (Grid*)fillWith:(id<CellInterface>)cell {
     return [self visit:[PopulateVisitor withCell:cell]];
     
 }

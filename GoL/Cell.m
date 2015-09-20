@@ -1,21 +1,17 @@
 #import "Cell.h"
 #import "Grid.h"
 
-@interface LivingCell : Cell <ActiveCell>
+@interface LivingCell : Cell
 
 @end
 
-@interface DeadCell : Cell <ActiveCell>
+@interface DeadCell : Cell
 
 @end
 
 @implementation Cell
 
-- (id<ActiveCell>)cell {
-    return nil;
-}
-
-+ (id<AbstractCell>)living {
++ (id<CellInterface>)living {
     static LivingCell* value = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -24,7 +20,7 @@
     return value;
 }
 
-+ (id<AbstractCell>)dead {
++ (id<CellInterface>)dead {
     static DeadCell* value = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -43,19 +39,26 @@
             integerValue];
 }
 
-- (id<AbstractCell>)switchPopulation {
+- (id<CellInterface>)switchPopulation {
     return self;
 }
 
-- (id<AbstractCell>)tickOnGrid:(Grid*)grid
+- (id<CellInterface>)tickOnGrid:(Grid*)grid
                              x:(NSInteger)x
                              y:(NSInteger)y {
-    return [[[self cell]
-             potentialStates]
-            objectAtIndex:[[self cell]
+    return [[self potentialStates]
+            objectAtIndex:[self
                            neighboursOnGrid:grid
                            x:x
                            y:y]];
+}
+
+- (NSArray*)potentialStates {
+    return nil;
+}
+
+- (NSInteger)populationValue {
+    return -1;
 }
 
 - (instancetype)copyWithZone:(NSZone *)zone {
@@ -66,11 +69,7 @@
 
 @implementation LivingCell
 
-- (id<AbstractCell>)cell {
-    return self;
-}
-
-- (id<AbstractCell>)switchPopulation {
+- (id<CellInterface>)switchPopulation {
     return [Cell dead];
 }
 
@@ -99,11 +98,7 @@
 
 @implementation DeadCell
 
-- (id<AbstractCell>)cell {
-    return self;
-}
-
-- (id<AbstractCell>)switchPopulation {
+- (id<CellInterface>)switchPopulation {
     return [Cell living];
 }
 

@@ -1,11 +1,11 @@
 #import <Foundation/Foundation.h>
 #import "Grid.h"
 
-@protocol AbstractCell;
+@protocol CellInterface;
 
 @protocol GridVisitor <NSObject>
 
-- (id<AbstractCell>)visitCell:(id<AbstractCell>)cell
+- (id<CellInterface>)visitCell:(id<CellInterface>)cell
                          grid:(Grid*)grid
                    sideLength:(NSInteger)n
                             x:(NSInteger)x
@@ -19,7 +19,7 @@
 
 @interface PopulateVisitor : NSObject <GridVisitor>
 
-+ (PopulateVisitor*)withCell:(id<AbstractCell>)cell;
++ (PopulateVisitor*)withCell:(id<CellInterface>)cell;
 
 @end
 
@@ -29,7 +29,7 @@
                sideLength:(NSInteger)sideLength
                   visitor:(id<GridVisitor>)visitor;
 
-- (id<AbstractCell>)visitNext;
+- (id<CellInterface>)visitNext;
 - (Grid*)visitedGrid;
 
 @end

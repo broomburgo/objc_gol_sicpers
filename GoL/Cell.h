@@ -1,39 +1,31 @@
 #import <Foundation/Foundation.h>
 #import "Grid.h"
 
-@protocol AbstractCell;
-@protocol ActiveCell;
+@protocol CellInterface;
 
 @protocol TickVisitableCell <NSObject>
 
-- (id<AbstractCell>)tickOnGrid:(Grid*)grid
+- (id<CellInterface>)tickOnGrid:(Grid*)grid
                              x:(NSInteger)x
                              y:(NSInteger)y;
 @end
 
-@protocol AbstractCell <TickVisitableCell>
-
-- (id<ActiveCell>)cell;
+@protocol CellInterface <TickVisitableCell>
 
 - (NSInteger)neighboursOnGrid:(Grid*)grid
                             x:(NSInteger)x
                             y:(NSInteger)y;
-- (id<AbstractCell>)switchPopulation;
-
-
-
-@end
-
-@protocol ActiveCell <AbstractCell>
+- (id<CellInterface>)switchPopulation;
 
 - (NSArray*)potentialStates;
 - (NSInteger)populationValue;
 
+
 @end
 
-@interface Cell : NSObject <AbstractCell, NSCopying>
+@interface Cell : NSObject <CellInterface, NSCopying>
 
-+ (id<AbstractCell>)living;
-+ (id<AbstractCell>)dead;
++ (id<CellInterface>)living;
++ (id<CellInterface>)dead;
 
 @end
