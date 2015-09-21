@@ -1,7 +1,26 @@
 #import "Grid.h"
 #import "Cell.h"
 #import "GridVisitors.h"
-#import "NSNumber+Times.h"
+#import "Times_Internal.h"
+
+@interface NSMutableArray (Times) <Times>
+
+- (NSMutableArray*)appendObject:(id)object;
+
+@end
+
+@implementation NSMutableArray (Times)
+
+- (NSMutableArray*)appendObject:(id)object {
+    if (object != nil) {
+        [self execute:^{
+            [self addObject:object];
+        }];
+    }
+    return self;
+}
+
+@end
 
 @interface EmptyCell : Cell <CellInterface>
 
@@ -21,11 +40,12 @@
 @implementation Grid
 
 + (Grid*)withSideLength:(NSUInteger)sideLength {
-    return [Grid withSideLength:sideLength
-                       dwellers:[[NSNumber numberWithInteger:sideLength*sideLength]
-                                 timesMake:[[NSMutableArray alloc] initWithCapacity:sideLength*sideLength]
-                                 perform:@selector(addObject:)
-                                 withObject:[EmptyCell new]]];
+    return [Grid
+            withSideLength:sideLength
+            dwellers:[[[[NSMutableArray alloc]
+                        initWithCapacity:sideLength*sideLength]
+                       times:sideLength*sideLength]
+                      appendObject:[EmptyCell new]]];
 }
 
 + (Grid*)withSideLength:(NSUInteger)sideLength
