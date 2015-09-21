@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
 #import "Grid.h"
+#import "Times.h"
 
 @protocol CellInterface;
 
@@ -23,13 +24,13 @@
 
 @end
 
-@interface GridVisitation : NSObject
+@interface GridVisitation : NSObject <Times>
 
 + (GridVisitation*)onGrid:(Grid*)grid
                sideLength:(NSInteger)sideLength
                   visitor:(id<GridVisitor>)visitor;
 
-- (id<CellInterface>)visitNext;
+- (GridVisitation*)visitNext;
 - (Grid*)visitedGrid;
 
 @end

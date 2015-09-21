@@ -70,13 +70,13 @@
 }
 
 - (Grid*)visit:(id<GridVisitor>)visitor {
-    return [[[NSNumber numberWithInteger:self.sideLength*self.sideLength]
-             timesMake:[GridVisitation
-                        onGrid:self
-                        sideLength:self.sideLength
-                        visitor:visitor]
-             perform:@selector(visitNext)]
-            visitedGrid];
+    return [[[[GridVisitation
+               onGrid:self
+               sideLength:self.sideLength
+               visitor:visitor]
+              times:self.sideLength*self.sideLength]
+             visitNext]
+            visitedGrid];    
 }
 
 - (instancetype)copyWithZone:(NSZone *)zone {

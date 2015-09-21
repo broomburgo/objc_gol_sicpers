@@ -2,6 +2,7 @@
 #import "GridVisitors.h"
 #import "Cell.h"
 #import "Grid.h"
+#import "Times_Internal.h"
 
 @implementation TickVisitor
 
@@ -63,23 +64,27 @@
     visitation.sideLength = sideLength;
     visitation.visitor = visitor;
     visitation.m_allVisited = [NSMutableArray array];
+    [visitation initializeTimes];
     return visitation;
 }
 
-- (id<CellInterface>)visitNext {
-    NSUInteger x = self.cursor / self.sideLength;
-    NSUInteger y = self.cursor % self.sideLength;
-    self.cursor += 1;
-    id<CellInterface> visited = [self.visitor
-                                visitCell:[self.grid
-                                           cellAtX:x
-                                           y:y]
-                                grid:self.grid
-                                sideLength:self.sideLength
-                                x:x
-                                y:y];
-    [self.m_allVisited addObject:visited];
-    return visited;
+
+- (GridVisitation*)visitNext {
+    [self execute:^{
+        NSUInteger x = self.cursor / self.sideLength;
+        NSUInteger y = self.cursor % self.sideLength;
+        self.cursor += 1;
+        [self.m_allVisited
+         addObject:[self.visitor
+                    visitCell:[self.grid
+                               cellAtX:x
+                               y:y]
+                    grid:self.grid
+                    sideLength:self.sideLength
+                    x:x
+                    y:y]];
+    }];
+    return self;
 }
 
 - (Grid*)visitedGrid {

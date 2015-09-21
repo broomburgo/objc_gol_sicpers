@@ -18,6 +18,7 @@
 		3893B6DE1BA16F9600B6733C /* GridVisitors.m in Sources */ = {isa = PBXBuildFile; fileRef = 3893B6D91BA16F9600B6733C /* GridVisitors.m */; };
 		3893B6DF1BA16F9600B6733C /* NSNumber+Times.m in Sources */ = {isa = PBXBuildFile; fileRef = 3893B6DB1BA16F9600B6733C /* NSNumber+Times.m */; };
 		3893B6E21BA1710700B6733C /* GridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3893B6E11BA1710700B6733C /* GridView.m */; };
+		38D9D4951BAFF3A800D2FE38 /* Times_Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D9D4941BAFF3A800D2FE38 /* Times_Internal.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,9 @@
 		3893B6DB1BA16F9600B6733C /* NSNumber+Times.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Times.m"; sourceTree = "<group>"; };
 		3893B6E01BA1710700B6733C /* GridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridView.h; sourceTree = "<group>"; };
 		3893B6E11BA1710700B6733C /* GridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridView.m; sourceTree = "<group>"; };
+		38D9D4901BAFE0F900D2FE38 /* Times.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Times.h; sourceTree = "<group>"; };
+		38D9D4931BAFF18C00D2FE38 /* Times_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Times_Internal.h; sourceTree = "<group>"; };
+		38D9D4941BAFF3A800D2FE38 /* Times_Internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Times_Internal.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 		3893B6AF1BA16F4000B6733C /* GoL */ = {
 			isa = PBXGroup;
 			children = (
+				38D9D4961BAFF4B800D2FE38 /* Times */,
 				3893B6D31BA16F7300B6733C /* Logic */,
 				3893B6B21BA16F4000B6733C /* AppDelegate.h */,
 				3893B6B31BA16F4000B6733C /* AppDelegate.m */,
@@ -147,6 +152,16 @@
 				3893B6E11BA1710700B6733C /* GridView.m */,
 			);
 			name = Logic;
+			sourceTree = "<group>";
+		};
+		38D9D4961BAFF4B800D2FE38 /* Times */ = {
+			isa = PBXGroup;
+			children = (
+				38D9D4901BAFE0F900D2FE38 /* Times.h */,
+				38D9D4931BAFF18C00D2FE38 /* Times_Internal.h */,
+				38D9D4941BAFF3A800D2FE38 /* Times_Internal.m */,
+			);
+			name = Times;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +267,7 @@
 				3893B6DD1BA16F9600B6733C /* Grid.m in Sources */,
 				3893B6B91BA16F4000B6733C /* ViewController.m in Sources */,
 				3893B6DC1BA16F9600B6733C /* Cell.m in Sources */,
+				38D9D4951BAFF3A800D2FE38 /* Times_Internal.m in Sources */,
 				3893B6DF1BA16F9600B6733C /* NSNumber+Times.m in Sources */,
 				3893B6B61BA16F4000B6733C /* main.m in Sources */,
 				3893B6E21BA1710700B6733C /* GridView.m in Sources */,
