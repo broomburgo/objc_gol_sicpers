@@ -6,8 +6,8 @@
 @protocol TickVisitableCell <NSObject>
 
 - (id<CellInterface>)tickOnGrid:(Grid*)grid
-                             x:(NSInteger)x
-                             y:(NSInteger)y;
+                              x:(NSInteger)x
+                              y:(NSInteger)y;
 @end
 
 @protocol CellInterface <TickVisitableCell>

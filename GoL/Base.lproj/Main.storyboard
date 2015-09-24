@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -664,7 +664,7 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--View Controller-->
+        <!--Change Delegate-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
@@ -674,12 +674,14 @@
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="hjl-Km-piR" customClass="GridView">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                <animations/>
                                 <connections>
                                     <outlet property="changeDelegate" destination="XfG-lQ-9wD" id="Qbs-OD-tBg"/>
                                 </connections>
                             </customView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NYM-XE-wpR">
-                                <rect key="frame" x="2" y="234" width="76" height="32"/>
+                                <rect key="frame" x="2" y="234" width="75" height="32"/>
+                                <animations/>
                                 <buttonCell key="cell" type="push" title="Clean" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="U1f-oc-STJ">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -690,6 +692,7 @@
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QlS-at-o1D">
                                 <rect key="frame" x="412" y="234" width="66" height="32"/>
+                                <animations/>
                                 <buttonCell key="cell" type="push" title="Tick" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="r9Z-D3-nDr">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -709,6 +712,7 @@
                             <constraint firstItem="NYM-XE-wpR" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="8" id="cvp-Xc-7Tt"/>
                             <constraint firstItem="hjl-Km-piR" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="pqn-gz-6FS"/>
                         </constraints>
+                        <animations/>
                     </view>
                     <connections>
                         <outlet property="gridView" destination="hjl-Km-piR" id="5jU-Vq-gvx"/>

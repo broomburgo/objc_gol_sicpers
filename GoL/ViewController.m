@@ -14,7 +14,8 @@ static const NSUInteger gridSize = 15;
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
 
     self.grid = [[Grid withSideLength:gridSize]
@@ -22,14 +23,9 @@ static const NSUInteger gridSize = 15;
     [self.gridView drawGrid:self.grid];
 }
 
-- (void)setRepresentedObject:(id)representedObject {
-    [super setRepresentedObject:representedObject];
-
-    // Update the view, if already loaded.
-}
-
 - (id<ChangeDelegate>)changeAtRelativeX:(float)x
-                        y:(float)y {
+                        y:(float)y
+{
     NSInteger cellX = floor(x * gridSize);
     NSInteger cellY = floor(y * gridSize);
     
@@ -45,12 +41,14 @@ static const NSUInteger gridSize = 15;
     return self;
 }
 
-- (IBAction)tickAction:(NSButton *)sender {
+- (IBAction)tickAction:(NSButton *)sender
+{
     self.grid = [self.grid tick];
     [self.gridView drawGrid:self.grid];
 }
 
-- (IBAction)cleanAction:(NSButton *)sender {
+- (IBAction)cleanAction:(NSButton *)sender
+{
     self.grid = [self.grid fillWith:[Cell dead]];
     [self.gridView drawGrid:self.grid];
 }

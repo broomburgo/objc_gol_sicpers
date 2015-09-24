@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		381494BA1BB3FD580066BEC2 /* HOAbstract.m in Sources */ = {isa = PBXBuildFile; fileRef = 381494B91BB3FD580066BEC2 /* HOAbstract.m */; settings = {ASSET_TAGS = (); }; };
+		381494BD1BB3FEEA0066BEC2 /* HOTimes.m in Sources */ = {isa = PBXBuildFile; fileRef = 381494BC1BB3FEEA0066BEC2 /* HOTimes.m */; settings = {ASSET_TAGS = (); }; };
+		381494C01BB400790066BEC2 /* NSObject+HigherOrderMessaging.m in Sources */ = {isa = PBXBuildFile; fileRef = 381494BF1BB400790066BEC2 /* NSObject+HigherOrderMessaging.m */; settings = {ASSET_TAGS = (); }; };
+		381494C41BB407810066BEC2 /* NSMutableArray+Append.m in Sources */ = {isa = PBXBuildFile; fileRef = 381494C31BB407810066BEC2 /* NSMutableArray+Append.m */; settings = {ASSET_TAGS = (); }; };
 		3893B6B41BA16F4000B6733C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3893B6B31BA16F4000B6733C /* AppDelegate.m */; };
 		3893B6B61BA16F4000B6733C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3893B6B51BA16F4000B6733C /* main.m */; };
 		3893B6B91BA16F4000B6733C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3893B6B81BA16F4000B6733C /* ViewController.m */; };
@@ -16,7 +20,6 @@
 		3893B6DC1BA16F9600B6733C /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3893B6D51BA16F9600B6733C /* Cell.m */; };
 		3893B6DD1BA16F9600B6733C /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 3893B6D71BA16F9600B6733C /* Grid.m */; };
 		3893B6DE1BA16F9600B6733C /* GridVisitors.m in Sources */ = {isa = PBXBuildFile; fileRef = 3893B6D91BA16F9600B6733C /* GridVisitors.m */; };
-		3893B6DF1BA16F9600B6733C /* NSNumber+Times.m in Sources */ = {isa = PBXBuildFile; fileRef = 3893B6DB1BA16F9600B6733C /* NSNumber+Times.m */; };
 		3893B6E21BA1710700B6733C /* GridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3893B6E11BA1710700B6733C /* GridView.m */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +34,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		381494B81BB3FD580066BEC2 /* HOAbstract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HOAbstract.h; sourceTree = "<group>"; };
+		381494B91BB3FD580066BEC2 /* HOAbstract.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HOAbstract.m; sourceTree = "<group>"; };
+		381494BB1BB3FEEA0066BEC2 /* HOTimes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HOTimes.h; sourceTree = "<group>"; };
+		381494BC1BB3FEEA0066BEC2 /* HOTimes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HOTimes.m; sourceTree = "<group>"; };
+		381494BE1BB400790066BEC2 /* NSObject+HigherOrderMessaging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HigherOrderMessaging.h"; sourceTree = "<group>"; };
+		381494BF1BB400790066BEC2 /* NSObject+HigherOrderMessaging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HigherOrderMessaging.m"; sourceTree = "<group>"; };
+		381494C21BB407810066BEC2 /* NSMutableArray+Append.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Append.h"; sourceTree = "<group>"; };
+		381494C31BB407810066BEC2 /* NSMutableArray+Append.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Append.m"; sourceTree = "<group>"; };
+		381494C51BB408D60066BEC2 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3893B6AD1BA16F4000B6733C /* GoL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3893B6B11BA16F4000B6733C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3893B6B21BA16F4000B6733C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -49,8 +61,6 @@
 		3893B6D71BA16F9600B6733C /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grid.m; sourceTree = "<group>"; };
 		3893B6D81BA16F9600B6733C /* GridVisitors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridVisitors.h; sourceTree = "<group>"; };
 		3893B6D91BA16F9600B6733C /* GridVisitors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridVisitors.m; sourceTree = "<group>"; };
-		3893B6DA1BA16F9600B6733C /* NSNumber+Times.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Times.h"; sourceTree = "<group>"; };
-		3893B6DB1BA16F9600B6733C /* NSNumber+Times.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Times.m"; sourceTree = "<group>"; };
 		3893B6E01BA1710700B6733C /* GridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridView.h; sourceTree = "<group>"; };
 		3893B6E11BA1710700B6733C /* GridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +83,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		381494B71BB3FCFB0066BEC2 /* Higher Order Messaging */ = {
+			isa = PBXGroup;
+			children = (
+				381494B81BB3FD580066BEC2 /* HOAbstract.h */,
+				381494B91BB3FD580066BEC2 /* HOAbstract.m */,
+				381494BB1BB3FEEA0066BEC2 /* HOTimes.h */,
+				381494BC1BB3FEEA0066BEC2 /* HOTimes.m */,
+				381494BE1BB400790066BEC2 /* NSObject+HigherOrderMessaging.h */,
+				381494BF1BB400790066BEC2 /* NSObject+HigherOrderMessaging.m */,
+			);
+			name = "Higher Order Messaging";
+			sourceTree = "<group>";
+		};
+		381494C11BB4076F0066BEC2 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				381494C21BB407810066BEC2 /* NSMutableArray+Append.h */,
+				381494C31BB407810066BEC2 /* NSMutableArray+Append.m */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
 		3893B6A41BA16F4000B6733C = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				3893B6D31BA16F7300B6733C /* Logic */,
+				381494B71BB3FCFB0066BEC2 /* Higher Order Messaging */,
+				381494C11BB4076F0066BEC2 /* Other */,
 				3893B6B21BA16F4000B6733C /* AppDelegate.h */,
 				3893B6B31BA16F4000B6733C /* AppDelegate.m */,
 				3893B6B71BA16F4000B6733C /* ViewController.h */,
@@ -111,6 +145,7 @@
 			children = (
 				3893B6B11BA16F4000B6733C /* Info.plist */,
 				3893B6B51BA16F4000B6733C /* main.m */,
+				381494C51BB408D60066BEC2 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -141,8 +176,6 @@
 				3893B6D71BA16F9600B6733C /* Grid.m */,
 				3893B6D81BA16F9600B6733C /* GridVisitors.h */,
 				3893B6D91BA16F9600B6733C /* GridVisitors.m */,
-				3893B6DA1BA16F9600B6733C /* NSNumber+Times.h */,
-				3893B6DB1BA16F9600B6733C /* NSNumber+Times.m */,
 				3893B6E01BA1710700B6733C /* GridView.h */,
 				3893B6E11BA1710700B6733C /* GridView.m */,
 			);
@@ -251,11 +284,14 @@
 				3893B6DE1BA16F9600B6733C /* GridVisitors.m in Sources */,
 				3893B6DD1BA16F9600B6733C /* Grid.m in Sources */,
 				3893B6B91BA16F4000B6733C /* ViewController.m in Sources */,
+				381494C41BB407810066BEC2 /* NSMutableArray+Append.m in Sources */,
 				3893B6DC1BA16F9600B6733C /* Cell.m in Sources */,
-				3893B6DF1BA16F9600B6733C /* NSNumber+Times.m in Sources */,
 				3893B6B61BA16F4000B6733C /* main.m in Sources */,
+				381494C01BB400790066BEC2 /* NSObject+HigherOrderMessaging.m in Sources */,
+				381494BA1BB3FD580066BEC2 /* HOAbstract.m in Sources */,
 				3893B6E21BA1710700B6733C /* GridView.m in Sources */,
 				3893B6B41BA16F4000B6733C /* AppDelegate.m in Sources */,
+				381494BD1BB3FEEA0066BEC2 /* HOTimes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +351,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = GoL/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -357,6 +394,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = GoL/PrefixHeader.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

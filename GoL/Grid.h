@@ -10,7 +10,7 @@
                dwellers:(NSArray*)dwellers;
 
 - (id<CellInterface>)cellAtX:(NSInteger)x
-                          y:(NSInteger)y;
+                           y:(NSInteger)y;
 
 - (NSArray*)neighboursOfX:(NSInteger)x
                         y:(NSInteger)y;
