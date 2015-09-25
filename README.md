@@ -7,9 +7,9 @@ The original project can be found on [BitBucket](https://bitbucket.org/iamleeg/l
 
 I made some stylistic and polymorphic changes, and tried to implement the "higher-order messaging" example (i.e. something like `[[visitation times:n*n] visitNext]`) in a couple of ways:
 
-- in the "higher_order_messaging" branch there's a solution that's rather elegant but requires high dynamism;
-- in the "higher_order_messaging_ugly" branch there's a worse, uglier solution, but it's more type safe;
+- in the `higher_order_messaging` branch there's a solution that's rather elegant but requires high dynamism;
+- in the `higher_order_messaging_ugly` branch there's a worse, uglier solution, but it's more type safe;
 
 As with the original project, this is free, but it should be seen as an educational effort, rather than a production-ready framework or something like that.
 
-Please learn things yourself, don't outsurce knowledge.
+Please learn things yourself, don't outsource knowledge.
